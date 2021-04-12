@@ -81,4 +81,8 @@ public class FlightData {
     flightList.add(sea1);
   
   }
+  
+  public ArrayList<FlightPath> getList(){
+    return flightList;
+  }
 }

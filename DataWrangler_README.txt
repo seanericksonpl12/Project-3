@@ -4,7 +4,7 @@ Name of DataWrangler: Erhan Wang
 @wisc.edu Email of DataWrangler: ewang43@wisc.edu
 Group: hg
 Team: blue
-Files Written by Me:FlightPathInterface.java FlightPath.java FlightData.java DataWrangler_README.txt
+Files Written by Me:FlightPathInterface.java FlightPath.java FlightData.java DataWrangler_README.txt FlightDataTest.java
 --------------------
 <List all files that were within this project that were written by you, and
  include a short description of the purpose that each file servers>
