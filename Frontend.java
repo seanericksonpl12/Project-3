@@ -7,11 +7,18 @@
 // Lecturer: Gary Dahl
 // Notes to Grader: <optional extra notes>
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintStream;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.zip.DataFormatException;
 
+/*
+ * This class 
+ */
 public class Frontend {
 //scanner and backend objects used throughout the class.
  static Scanner scan = new Scanner(System.in);
@@ -50,7 +57,9 @@ public class Frontend {
    // while the input is not x, there are various cases based on input that will take the user to
    // other menus.
    while(!command.equals("exit")){
-   
+   if(command.equals("exit")) {
+     break;
+   }
    if (command.equals("A")) {
      getAirports();
    }
@@ -74,7 +83,8 @@ public class Frontend {
    System.out.println("----------------------------------------------");
    System.out.println("");
    System.out.println("Thank you for using the Connecting Flight app. Come back soon!");
-   scan.close();   
+   scan.close();  
+  // System.exit(0);
  }
  
  /**
@@ -94,6 +104,7 @@ public class Frontend {
 
    if(start.equals("x")) { 
      run();   
+     return;
    }
    start = start.toUpperCase();
    //prompt user to enter ending point
@@ -101,6 +112,7 @@ public class Frontend {
    String end = scan.nextLine();
    if(end.equals("x")) {
      run();    
+     return;
    }
    end = end.toUpperCase();
    System.out.println("----------------------------------------------");
@@ -210,12 +222,14 @@ public class Frontend {
   * @param args
   */
  public static void main(String[] args) {
+  try {
    Frontend F = new Frontend();
    back = new Backend();
-   
    F.run();
-   
-
+  }
+  catch(Exception e) {
+   System.exit(0);// runs the program.
+  }
  }
  
 }
