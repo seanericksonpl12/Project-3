@@ -1,12 +1,5 @@
 import java.util.ArrayList;
-//--== CS400 File Header Information ==--
-//Name: Erhan Wang
-//Email: ewang43@wisc.edu
-//Team: blue
-//Role: data wrangler
-//TA: hang
-//Lecturer: florian
-//Notes to Grader: <optional extra notes>
+
 /**
  * This is the class that create a path which contain start, end, time and price.
  * And put all the value into a path and put paths into a list
@@ -55,6 +48,7 @@ public class FlightData {
   
     FlightPath sea1 = new FlightPath("SEA", "HNL", 275, 2666);
   
+    this.flightList = new ArrayList<FlightPath>();
     flightList.add(ord1);
     flightList.add(ord2);
     flightList.add(ord3);
