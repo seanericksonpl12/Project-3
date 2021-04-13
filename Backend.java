@@ -96,10 +96,11 @@ public class Backend implements BackendInterface {
    * Uses the total time for the shortest path between to airports to calculate the distance.\
    */
   @Override
-  public int getDistance(String start, String end) {
-    int totalTime = time.getPathCost(start, end);
-    int distance = (totalTime / 60);// multiplies by 500 since the average speed of a commercial
-    distance = distance * 500; // airplane is 500 mph
+  public Double getDistance(String start, String end) {
+    double totalTime = (double) time.getPathCost(start, end);
+    double distance =  (totalTime / 60);// multiplies by 500 since the average speed of a commercial
+    distance = distance * 500; 
+    distance = Math.round(distance * 100) / 100;// airplane is 500 mph
     return distance;
   }
 

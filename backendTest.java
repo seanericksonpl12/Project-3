@@ -74,9 +74,10 @@ public class backendTest {
     assertTrue(test.getTotalTime("MCO", "LAX") == 75);
 
     // test get distance
-    assertTrue(test.getDistance("DCA", "SEA") == 1500);
+    assertTrue(test.getDistance("DCA", "SEA") == 1983.0);
 
-    assertTrue(test.getDistance("MCO", "LAX") == 500);
+   
+    assertTrue(test.getDistance("MCO", "LAX") == 625.0);
   }
 
 }

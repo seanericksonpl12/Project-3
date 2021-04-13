@@ -14,7 +14,7 @@ public interface BackendInterface {
 
   public List<String> getCheapestPath(String start, String end);
 
-  public int getDistance(String start, String end);
+  public Double getDistance(String start, String end);
 
   public int getTotalTime(String start, String end);
 
