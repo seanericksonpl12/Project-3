@@ -97,7 +97,7 @@ public class Backend implements BackendInterface {
    */
   @Override
   public int getDistance(String start, String end) {
-    int totalTime = cost.getPathCost(start, end);
+    int totalTime = time.getPathCost(start, end);
     int distance = totalTime * 500;// multiplies by 500 since the average speed of a commercial
                                    // airplane is 500 mph
     return distance;
